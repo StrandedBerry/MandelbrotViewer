@@ -1,5 +1,5 @@
 # MandelbrotViewer
-A simple Mandelbrot fractal viewer written in java that runs directly from the command prompt with minimal imports. Recommended wide window for command prompt.
+A simple Mandelbrot fractal viewer written in java that displays directly from the command prompt with minimal imports. Recommended wide window for command prompt.
 
 Frame size can be changed from default 50 in MandelbrotViewer.java line 6.
 
