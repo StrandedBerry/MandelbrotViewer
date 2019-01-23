@@ -1,9 +1,9 @@
 import java.io.*;
 
 public class MandelbrotViewer {
-    public static int ITER = 1000;
+    public static final int ITER = 1000;
 
-    public static int FRAME = 50;
+    public static final int FRAME = 50;
 
     public static double c[][][] = new double [FRAME][FRAME][2];
 
