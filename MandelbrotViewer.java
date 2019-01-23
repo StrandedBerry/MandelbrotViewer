@@ -71,11 +71,23 @@ public class MandelbrotViewer {
                 if (p[x][y] == ITER) {
                     System.out.print("xxx");
                 }
-                else if (p[x][y] > 50) {
+                else if (p[x][y] > ITER * 0.1) {
+                    System.out.print("^ ^");
+                }
+                else if (p[x][y] > ITER * 0.25) {
+                    System.out.print("<< ");
+                }
+                 else if (p[x][y] > ITER * 0.35 {
+                    System.out.print(" + ");
+                }
+                 else if (p[x][y] > ITER * 0.5) {
                     System.out.print(" * ");
                 }
-                else if (p[x][y] > 100) {
-                    System.out.print("^^^");
+                  else if (p[x][y] > ITER * 0.65) {
+                    System.out.print(" >>");
+                }
+                 else if (p[x][y] > ITER * 0.75) {
+                    System.out.print(" # ");
                 }
                 else {
                     System.out.print(" . ");
