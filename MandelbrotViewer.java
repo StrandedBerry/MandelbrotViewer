@@ -77,7 +77,7 @@ public class MandelbrotViewer {
                 else if (p[x][y] > ITER * 0.25) {
                     System.out.print("<< ");
                 }
-                 else if (p[x][y] > ITER * 0.35 {
+                 else if (p[x][y] > ITER * 0.35) {
                     System.out.print(" + ");
                 }
                  else if (p[x][y] > ITER * 0.5) {
