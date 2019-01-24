@@ -1,6 +1,6 @@
 ITER = 1000
 FRAME = 50
-ZOOM = 4
+ZOOM = 2
 
 c = []
 for x in range(FRAME):
