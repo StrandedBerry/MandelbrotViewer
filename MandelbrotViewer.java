@@ -4,6 +4,8 @@ public class MandelbrotViewer {
     public static final int ITER = 1000;
 
     public static final int FRAME = 50;
+    
+    public static final int ZOOM = 2;
 
     public static double c[][][] = new double [FRAME][FRAME][2];
 
@@ -32,7 +34,7 @@ public class MandelbrotViewer {
         return x;
     }
 
-    public static int[][] complex(int row, int col, double zoom) {
+    public static int[][] makeComplex(int row, int col, double zoom) {
         double INC = (4/Double.valueOf(FRAME)) / zoom;
 
         int[][] p = new int[FRAME][FRAME];
@@ -56,10 +58,10 @@ public class MandelbrotViewer {
             }
             x++;
         }
-        return p;
+        displayMandelbrot();
     }
 
-    public static void display(int[][] p) {
+    public static void displayMandelbrot(int[][] p) {
         for (int x = 0; x < FRAME; x++) {
             for (int y = 0; y < FRAME; y++) {
                 if (y == 0) {
@@ -127,9 +129,7 @@ public class MandelbrotViewer {
         while(true) {
             System.out.flush();
 
-            p = complex(row, col, zoom);
-
-            display(p);
+            makeComplex(row, col, zoom);
 
             System.out.println("\n\n"+"MANDELBROT | current zoom: "+zoom+
                                "x | current center: "+c[FRAME/2][FRAME/2][1]+" + "+
@@ -158,7 +158,7 @@ public class MandelbrotViewer {
 
             col = Integer.valueOf(input_string) - 1;
 
-            zoom *= 2;
+            zoom *= ZOOM;
         }
     }
 }
