@@ -58,7 +58,7 @@ public class MandelbrotViewer {
             }
             x++;
         }
-        displayMandelbrot();
+        displayMandelbrot(p);
     }
 
     public static void displayMandelbrot(int[][] p) {
