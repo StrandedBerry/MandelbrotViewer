@@ -132,9 +132,9 @@ public class MandelbrotViewer {
             makeComplex(row, col, zoom);
             
             if (c[FRAME/2][FRAME/2][0] < 0.01 && c[FRAME/2][FRAME/2][0] > -0.01) {
-                c[FRAME/2][FRAME/2][1] = 0.0;
+                c[FRAME/2][FRAME/2][0] = 0.0;
             }
-            if (c[FRAME/2][FRAME/2][0] < 0.01 && c[FRAME/2][FRAME/2][0] > -0.01) {
+            if (c[FRAME/2][FRAME/2][1] < 0.01 && c[FRAME/2][FRAME/2][1] > -0.01) {
                 c[FRAME/2][FRAME/2][1] = 0.0;
             }
 
