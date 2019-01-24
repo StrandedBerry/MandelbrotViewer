@@ -34,7 +34,7 @@ public class MandelbrotViewer {
         return x;
     }
 
-    public static int[][] makeComplex(int row, int col, double zoom) {
+    public static void makeComplex(int row, int col, double zoom) {
         double INC = (4/Double.valueOf(FRAME)) / zoom;
 
         int[][] p = new int[FRAME][FRAME];
@@ -130,6 +130,14 @@ public class MandelbrotViewer {
             System.out.flush();
 
             makeComplex(row, col, zoom);
+            
+            if (c[FRAME/2][FRAME/2][0] < 0.01 && c[FRAME/2][FRAME/2][0] > -0.01) {
+                c[FRAME/2][FRAME/2][1] = 0.0;
+            }
+            if (c[FRAME/2][FRAME/2][0] < 0.01 && c[FRAME/2][FRAME/2][0] > -0.01) {
+                c[FRAME/2][FRAME/2][1] = 0.0;
+            }
+
 
             System.out.println("\n\n"+"MANDELBROT | current zoom: "+zoom+
                                "x | current center: "+c[FRAME/2][FRAME/2][1]+" + "+
